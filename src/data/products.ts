@@ -1,10 +1,10 @@
-
 export interface Product {
   id: string;
   name: string;
   price: number;
   imageUrl: string;
   description: string;
+  category: string;
 }
 
 export const products: Product[] = [
@@ -14,6 +14,7 @@ export const products: Product[] = [
     price: 59.99,
     imageUrl: '/images/jersey.jpg',
     description: 'High-quality basketball jersey, breathable and comfortable.',
+    category: 'Apparel'
   },
   {
     id: '2',
@@ -21,6 +22,7 @@ export const products: Product[] = [
     price: 129.99,
     imageUrl: '/images/shoes.jpg',
     description: 'Professional basketball shoes for optimal performance and support.',
+    category: 'Footwear'
   },
   {
     id: '3',
@@ -28,6 +30,7 @@ export const products: Product[] = [
     price: 34.99,
     imageUrl: '/images/basketball.jpg',
     description: 'Official size and weight basketball, perfect for indoor and outdoor play.',
+    category: 'Equipment'
   },
   {
     id: '4',
@@ -35,5 +38,6 @@ export const products: Product[] = [
     price: 29.99,
     imageUrl: '/images/shorts.jpg',
     description: 'Lightweight and comfortable basketball shorts for training and games.',
+    category: 'Apparel'
   },
 ];

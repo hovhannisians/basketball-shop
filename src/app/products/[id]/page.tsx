@@ -81,7 +81,7 @@ export default function ProductDetailsPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div className="relative h-96 md:h-[600px] rounded-2xl overflow-hidden shadow-lg">
           <Image
-            src={product.image}
+            src={product.imageUrl}
             alt={product.name}
             fill
             className="object-cover"
