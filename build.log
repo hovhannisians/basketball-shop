@@ -2,20 +2,86 @@
 > basketball-shop@0.1.0 build
 > next build
 
-▲ Next.js 16.2.1 (Turbopack)
+  ▲ Next.js 14.2.3
 
-  Creating an optimized production build ...
-✓ Compiled successfully in 4.5s
-  Running TypeScript ...
-  Finished TypeScript in 3.3s ...
-  Collecting page data using 1 worker ...
-  Generating static pages using 1 worker (0/6) ...
-Error occurred prerendering page "/_not-found". Read more: https://nextjs.org/docs/messages/prerender-error
-Error: Attempted to call useCart() from the server but useCart is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
-    at <unknown> (.next/server/chunks/ssr/[root-of-the-server]__0_my7dp._.js:1:1917)
-    at j (.next/server/chunks/ssr/[root-of-the-server]__0_my7dp._.js:1:5539)
-    at stringify (<anonymous>) {
-  digest: '4049129298'
-}
-Export encountered an error on /_not-found/page: /_not-found, exiting the build.
-⨯ Next.js build worker exited with code: 1 and signal: null
+   Creating an optimized production build ...
+Failed to compile.
+
+./src/components/mode-toggle.tsx
+Module not found: Can't resolve '@/components/ui/dropdown-menu'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/components/Header.tsx
+
+./src/components/ui/card.tsx
+Error: 
+  [31mx[0m Expected unicode escape
+   ,-[[36;1;4m/home/user/project/src/components/ui/card.tsx[0m:1:1]
+ [2m1[0m | import * as React from "react"\n\nimport { cn } from "@/lib/utils"\n\nconst Card = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, ...props }, ref) => (\n    <div\n      ref={ref}\n      className={cn(\n        \"rounded-xl border border-zinc-200 bg-white text-zinc-950 shadow-sm dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-50\",\n        className\n      )}\n      {...props}\n    />\n  )\n)\nCard.displayName = \"Card\"\n\nconst CardHeader = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, ...props }, ref) => (\n    <div\n      ref={ref}\n      className={cn(\"flex flex-col space-y-1.5 p-6\", className)}\n      {...props}\n    />\n  )\n)\nCardHeader.displayName = \"CardHeader\"\n\nconst CardTitle = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<HTMLHeadingElement>>(\n  ({ className, ...props }, ref) => (\n    <h3\n      ref={ref}\n      className={cn(\"font-semibold leading-none tracking-tight\", className)}\n      {...props}\n    />\n  )\n)\nCardTitle.displayName = \"CardTitle\"\n\nconst CardDescription = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<HTMLParagraphElement>>(\n  ({ className, ...props }, ref) => (\n    <p\n      ref={ref}\n      className={cn(\"text-sm text-zinc-500 dark:text-zinc-400\", className)}\n      {...props}\n    />\n  )\n)\nCardDescription.displayName = \"CardDescription\"\n\nconst CardContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, ...props }, ref) => (\n    <div ref={ref} className={cn(\"p-6 pt-0\", className)} {...props} />\n  )\n)\nCardContent.displayName = \"CardContent\"\n\nconst CardFooter = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, ...props }, ref) => (\n    <div\n      ref={ref}\n      className={cn(\"flex items-center p-6 pt-0\", className)}\n      {...props}\n    />\n  )\n)\nCardFooter.displayName = \"CardFooter\"\n\nexport { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }\n
+   : [31;1m                              ^[0m
+   `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/ui/card.tsx
+./src/components/ProductCard.tsx
+./src/app/products/page.tsx
+
+./src/components/ui/separator.tsx
+Error: 
+  [31mx[0m Expected unicode escape
+   ,-[[36;1;4m/home/user/project/src/components/ui/separator.tsx[0m:1:1]
+ [2m1[0m | \"use client\"\n\nimport * as React from \"react\"\nimport * as SeparatorPrimitive from \"@radix-ui/react-separator\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst Separator = React.forwardRef<\n  React.ElementRef<typeof SeparatorPrimitive.Root>,\n  React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>\n>(\n  (\n    { className, orientation = \"horizontal\", decorative = true, ...props },\n    ref\n  ) => (\n    <SeparatorPrimitive.Root\n      ref={ref}\n      decorative={decorative}\n      orientation={orientation}\n      className={cn(\n        \"shrink-0 bg-zinc-200 dark:bg-zinc-800\",\n        orientation === \"horizontal\" ? \"h-[1px] w-full\" : \"h-full w-[1px]\",\n        className\n      )}\n      {...props}\n    />\n  )\n)\nSeparator.displayName = SeparatorPrimitive.Root.displayName\n\nexport { Separator }\n
+   : [31;1m^[0m
+   `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/ui/separator.tsx
+./src/components/layout/Footer.tsx
+
+./src/components/ui/sonner.tsx
+Error: 
+  [31mx[0m Unexpected token `Sonner`. Expected jsx identifier
+    ,-[[36;1;4m/home/user/project/src/components/ui/sonner.tsx[0m:6:1]
+ [2m 6[0m | 
+ [2m 7[0m | const Toaster = ({ ...props }: ToasterProps) => {
+ [2m 8[0m |   return (
+ [2m 9[0m |     <Sonner
+    : [31;1m     ^^^^^^[0m
+ [2m10[0m |       className=\"toaster group\"
+ [2m11[0m |       toastOptions={{
+ [2m12[0m |         classNames: {
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/ui/sonner.tsx
+./src/components/providers.tsx
+
+./src/lib/utils.ts
+Error: 
+  [31mx[0m Expected unicode escape
+   ,-[[36;1;4m/home/user/project/src/lib/utils.ts[0m:1:1]
+ [2m1[0m | import { clsx, type ClassValue } from "clsx"\nimport { twMerge } from "tailwind-merge"\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs))\n}\n
+   : [31;1m                                            ^[0m
+   `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/lib/utils.ts
+./src/components/ui/button.tsx
+./src/app/not-found.tsx
+
+
+> Build failed because of webpack errors
