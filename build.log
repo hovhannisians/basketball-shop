@@ -1,0 +1,21 @@
+
+> basketball-shop@0.1.0 build
+> next build
+
+▲ Next.js 16.2.1 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.5s
+  Running TypeScript ...
+  Finished TypeScript in 3.3s ...
+  Collecting page data using 1 worker ...
+  Generating static pages using 1 worker (0/6) ...
+Error occurred prerendering page "/_not-found". Read more: https://nextjs.org/docs/messages/prerender-error
+Error: Attempted to call useCart() from the server but useCart is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+    at <unknown> (.next/server/chunks/ssr/[root-of-the-server]__0_my7dp._.js:1:1917)
+    at j (.next/server/chunks/ssr/[root-of-the-server]__0_my7dp._.js:1:5539)
+    at stringify (<anonymous>) {
+  digest: '4049129298'
+}
+Export encountered an error on /_not-found/page: /_not-found, exiting the build.
+⨯ Next.js build worker exited with code: 1 and signal: null
